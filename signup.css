@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+}
+.nav {
+  background: #e5e5e5;
+  display: flex;
+}
+.image-sec {
+  width: 50%;
+}
+img.img-prop1 {
+  width: 100px;
+  margin: 22px 8%;
+}
+.menu-sec {
+  width: 50%;
+}
+ul.ul-menu {
+  display: flex;
+  list-style-type: none;
+  margin-left: 50%;
+}
+.ul-menu li {
+  margin-left: 14%;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 14px;
+}
+.banner_sec {
+  width: 100%;
+  /* background: url(image/backtoschool.jpg);
+      height: 572px; */
+}
+p.pop_sec {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 5%;
+  margin-left: 4%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.navlink {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.signup_sec {
+  width: 60%;
+  margin: 2% auto;
+  border: 3px solid #86611d;
+}
+p.signup_head {
+  text-align: center;
+  font-size: 35px;
+  margin: 2% auto;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.form_signup {
+  width: 60%;
+  margin: 4% auto;
+}
+label.lab_user {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+input.inp_user {
+  margin-left: 6%;
+  width: 65%;
+  font-size: 20px;
+  padding: 5px;
+}
+input.inp_email {
+  margin-left: 72px;
+  width: 65%;
+  font-size: 20px;
+  padding: 5px;
+}
+input.inp_pswd {
+  margin-left: 34px;
+  width: 65%;
+  font-size: 20px;
+  padding: 5px;
+}
+input.btn_submit {
+  font-size: 20px;
+  background: #84621a;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 2% 48%;
+}

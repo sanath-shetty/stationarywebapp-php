@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+}
+.nav {
+  background: #e5e5e5;
+  display: flex;
+}
+.image-sec {
+  width: 50%;
+}
+img.img-prop1 {
+  width: 100px;
+  margin: 22px 8%;
+}
+.menu-sec {
+  width: 50%;
+}
+ul.ul-menu {
+  display: flex;
+  list-style-type: none;
+  margin-left: 50%;
+}
+.ul-menu li {
+  margin-left: 14%;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 14px;
+}
+.banner_sec {
+  width: 100%;
+  /* background: url(image/backtoschool.jpg);
+    height: 572px; */
+}
+p.pop_sec {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 5%;
+  margin-left: 4%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.navlink {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.login_sec {
+  width: 60%;
+  border: 3px solid #86611d;
+  margin: 2% auto;
+}
+p.login_head {
+  text-align: center;
+  font-size: 35px;
+  margin: 2% 0;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+label.lab_user {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+input.inp_user {
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 5px;
+  margin-left: 20px;
+}
+input.inp_pswd {
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 5px;
+  margin-left: 22px;
+}
+.form_div {
+  width: 50%;
+  margin: 5% auto;
+}
+input.btn_login {
+  font-size: 20px;
+  background: #846306;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 48% 3%;
+}
+p.signUp {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+span.span_su a {
+  color: #2d280a;
+  text-decoration: underline;
+}

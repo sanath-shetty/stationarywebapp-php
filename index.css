@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+}
+.nav {
+  background: #e5e5e5;
+  display: flex;
+}
+.image-sec {
+  width: 50%;
+}
+img.img-prop1 {
+  width: 100px;
+  margin: 22px 8%;
+}
+.menu-sec {
+  width: 50%;
+}
+ul.ul-menu {
+  display: flex;
+  list-style-type: none;
+  margin-left: 35%;
+}
+.ul-menu li {
+  margin-left: 10%;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 14px;
+}
+.banner_sec {
+  width: 100%;
+  /* background: url(image/backtoschool.jpg);
+  height: 572px; */
+}
+p.pop_sec {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 5%;
+  margin-left: 4%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.navlink {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.profile {
+  width: 18%;
+  background: #e5e5e5;
+  margin-right: 3%;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px black;
+  position: absolute;
+  right: 0;
+}
+.active {
+  display: none;
+}
+p.para {
+  font-size: 20px;
+  margin-left: 10%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+span.span_uname {
+  font-size: 25px;
+  font-weight: normal;
+}
+p.btn-pswd {
+  margin-left: 10%;
+  font-size: 15px;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #db291f;
+  border: none;
+  width: 55%;
+  text-align: center;
+}
+p.btn-logout {
+  margin-left: 10%;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  background: #033782;
+  border: none;
+  color: white;
+  margin-top: 5%;
+  width: max-content;
+  text-align: center;
+  outline: none;
+}
+input.btn_logout {
+  color: white;
+  font-size: 17px;
+  font-family: sans-serif;
+  background: #033782;
+  border: none;
+  width: max-content;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+.btn-pswd a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.btn-logout a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 25%;
+  height: 380px;
+  margin: 2% 4%;
+  border: 2px solid lightgray;
+}
+img.img_prop {
+  width: 80%;
+  margin: 18px 10%;
+  border: 1px solid lightgray;
+  height: 180px;
+}
+input.inp_title {
+  background: no-repeat;
+  border: none;
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  width: 80%;
+  margin: 2% 12%;
+}
+input.inp_price {
+  font-size: 20px;
+  background: none;
+  border: none;
+  width: 25%;
+  color: black;
+}
+label.lab_rs {
+  margin-left: 12%;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+input.txt_disp {
+  width: 80%;
+  border: none;
+  font-size: 15px;
+  margin: 6% 12%;
+  background: none;
+  color: black;
+}
+.btn_update {
+  margin-left: 12%;
+  font-size: 15px;
+  font-family: sans-serif;
+  background: #84621b;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+}
+.btn_delete {
+  margin-left: 5%;
+  font-size: 15px;
+  font-family: sans-serif;
+  background: #706b72;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+}

@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+}
+.container{
+    width: 100%;
+}
+.nav {
+    background: #e5e5e5;
+    display: flex;
+}
+.image-sec {
+    width: 50%;
+}
+img.img-prop1 {
+    width: 100px;
+    margin: 22px 8%;
+}
+.menu-sec {
+    width: 50%;
+}
+ul.ul-menu {
+    display: flex;
+    list-style-type: none;
+    margin-left: 45%;
+}
+.ul-menu li {
+    margin-left: 14%;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 14px;
+}
+.login-sec {
+    width: 50%;
+    margin: 5% auto;
+    border: 3px solid #849487;
+}
+p.login.head {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    margin: 3%;
+    font-weight: bold;
+    color: #775a0c;
+}
+p.user-name {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: gray;
+    text-align: center;
+    margin: 2%;
+}
+input.inp-uname {
+    margin: 0 30%;
+    width: 40%;
+    font-size: 20px;
+    padding: 5px;
+    outline: none;
+}
+p.user-psed {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: gray;
+    text-align: center;
+    margin: 2%;
+}
+input.inp-pswd {
+    margin: 0 30%;
+    width: 40%;
+    font-size: 20px;
+    padding: 5px;
+    outline: none;
+}
+input.btn-submit {
+    width: 15%;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #846306;
+    border: none;
+    color: white;
+    margin: 6% 42%;
+}

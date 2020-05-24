@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+}
+.nav {
+  background: #e5e5e5;
+  display: flex;
+}
+.image-sec {
+  width: 50%;
+}
+img.img-prop1 {
+  width: 100px;
+  margin: 22px 8%;
+}
+.menu-sec {
+  width: 50%;
+}
+ul.ul-menu {
+  display: flex;
+  list-style-type: none;
+  margin-left: 35%;
+}
+.ul-menu li {
+  margin-left: 10%;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 14px;
+}
+.banner_sec {
+  width: 100%;
+  /* background: url(image/backtoschool.jpg);
+    height: 572px; */
+}
+p.pop_sec {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 5%;
+  margin-left: 4%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.navlink {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.profile {
+  width: 18%;
+  background: #e5e5e5;
+  margin-right: 3%;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px black;
+  position: absolute;
+  right: 0;
+}
+.active {
+  display: none;
+}
+p.para {
+  font-size: 20px;
+  margin-left: 10%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+span.span_uname {
+  font-size: 25px;
+  font-weight: normal;
+}
+p.btn-pswd {
+  margin-left: 10%;
+  font-size: 15px;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #db291f;
+  border: none;
+  width: 55%;
+  text-align: center;
+}
+p.btn-logout {
+  margin-left: 10%;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  background: #033782;
+  border: none;
+  color: white;
+  margin-top: 5%;
+  width: max-content;
+  text-align: center;
+  outline: none;
+}
+input.btn_logout {
+  color: white;
+  font-size: 17px;
+  font-family: sans-serif;
+  background: #033782;
+  border: none;
+  width: max-content;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+.btn-pswd a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.btn-logout a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+.cart_sec {
+  width: 80%;
+  margin: 2% auto;
+}
+.item_sec {
+  width: 100%;
+  display: flex;
+  border: 3px solid #86611d;
+  margin-bottom: 2%;
+}
+p.cart_head {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #86611d;
+  font-weight: bold;
+}
+img.img_prop1 {
+  width: 180px;
+  margin: 30px;
+}
+.info_sec {
+  width: 62%;
+}
+input.item_head {
+  font-size: 20px;
+  border: none;
+  background: none;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+input.disp_head {
+  font-size: 20px;
+  border: none;
+  background: none;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+input.price_head {
+  font-size: 20px;
+  border: none;
+  background: none;
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+label.rs {
+  font-size: 20px;
+  border: none;
+  background: none;
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+.btn_sec {
+  width: 16%;
+  padding-top: 7%;
+}
+.btn_remove {
+  font-size: 20px;
+  color: white;
+  background: red;
+  border: none;
+  padding: 5px 10px;
+}
+input.tot_pr {
+  margin-top: 2%;
+  font-size: 20px;
+  background: no-repeat;
+  border: none;
+  color: black;
+}
+label.total_head {
+  margin-top: 2%;
+  font-size: 20px;
+  background: no-repeat;
+  border: none;
+  color: black;
+}
+input.btn_pro {
+  float: right;
+  font-size: 20px;
+  padding: 5px 10px;
+  background: #86611d;
+  border: none;
+  color: white;
+}
+p.payment_head {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #86611d;
+}
+input.inp_check {
+  zoom: 1.5;
+  margin-bottom: 2%;
+}
+label.inp_check_head {
+  font-size: 19px;
+  font-family: sans-serif;
+  margin-left: 2%;
+}

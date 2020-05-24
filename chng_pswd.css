@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+}
+.nav {
+  background: #e5e5e5;
+  display: flex;
+}
+.image-sec {
+  width: 50%;
+}
+img.img-prop1 {
+  width: 100px;
+  margin: 22px 8%;
+}
+.menu-sec {
+  width: 50%;
+}
+ul.ul-menu {
+  display: flex;
+  list-style-type: none;
+  margin-left: 55%;
+}
+.ul-menu li {
+  margin-left: 15%;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 14px;
+}
+.profile {
+  width: 18%;
+  background: #e5e5e5;
+  margin-right: 3%;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px black;
+  position: absolute;
+  right: 0;
+}
+p.para {
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left: 10%;
+  color: #83601c;
+  font-weight: bold;
+}
+.btn-pswd {
+  margin-left: 10%;
+  font-size: 15px;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #db291f;
+  border: none;
+  width: 55%;
+  text-align: center;
+}
+.btn-pswd a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.btn-logout {
+  margin-left: 10%;
+  font-size: 15px;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #033782;
+  border: none;
+  color: white;
+  margin-top: 5%;
+  width: 30%;
+  text-align: center;
+}
+.btn-logout a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.active {
+  display: none;
+}
+.itemhead a {
+  color: black;
+}
+span.span_uname {
+  font-size: 30px;
+}
+.form-sec {
+  width: 50%;
+  margin: auto;
+  margin-top: 6%;
+  border: 3px solid #86611d;
+}
+p.chng-pwsd-head {
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+input.old-pswd {
+  width: 50%;
+  margin-left: 25%;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 3%;
+}
+input.new-pswd {
+  width: 50%;
+  margin-left: 25%;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 3%;
+}
+input.conf-pswd {
+  width: 50%;
+  margin-left: 25%;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 3%;
+}
+p.chng-pwsd-head {
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 3%;
+}
+input.btn-submit {
+  font-size: 20px;
+  width: auto;
+  padding: 5px 10px;
+  background: #9c7412;
+  color: white;
+  border: none;
+  margin-left: 36%;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+p.msg {
+  font-size: 15px;
+  margin-left: 5%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.navlink {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
