@@ -118,6 +118,7 @@ input.btn_logout {
 .cart_sec {
   width: 80%;
   margin: 2% auto;
+  margin-bottom: 5%;
 }
 .item_sec {
   width: 100%;
@@ -133,6 +134,7 @@ p.cart_head {
 }
 img.img_prop1 {
   width: 180px;
+  height: 200px;
   margin: 30px;
 }
 .info_sec {
@@ -151,7 +153,7 @@ input.disp_head {
   font-size: 20px;
   border: none;
   background: none;
-  width: 100%;
+  width: 90%;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 3%;
@@ -179,6 +181,7 @@ label.rs {
 }
 .btn_remove {
   font-size: 20px;
+  font-family: sans-serif;
   color: white;
   background: red;
   border: none;

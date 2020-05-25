@@ -1,36 +1,22 @@
-<?php 
-    session_start();
-    include 'connect.php' ;
-
-    $sql = "SELECT * FROM `customer` WHERE `cst_id` = '" .$_SESSION["cst_session"]. "'";
-    $result = mysqli_query($con,$sql);
-
-    if (mysqli_num_rows($result) > 0) {
-    	while ($row = mysqli_fetch_assoc($result)) {
-    		$user = $row["userName"];
-    	}
-    }else {
-    	header('location: index.php');
-    }
-?>
-
 <?php
-    $msg = "";
+	$msg = "";
+	include 'connect.php';
     ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
     if (isset($_POST["btn-submit"])) {
     	$oldPass = $_POST["old-pswd"];
         $newPass = $_POST["new-pswd"];
     	$confPass = $_POST["conf-pswd"];
-
-    	$sql = "SELECT * FROM `customer` WHERE `cst_id` = '" .$_SESSION["cst_session"]. "'";
-        $result = mysqli_query($con,$sql);
-
-        if (mysqli_num_rows($result) > 0) {
-    	    while ($row = mysqli_fetch_assoc($result)) {
+    
+        $sl = "SELECT * FROM `active` INNER JOIN `customer` ON active.cst_id = customer.cst_id";
+		$cn = mysqli_query($con,$sl);
+		
+	if(mysqli_num_rows($cn) > 0) {
+    	    while ($row = mysqli_fetch_assoc($cn)) {
+				$id = $row["cst_id"];
     		    $user = $row["userName"];
     		    if ($row["pswd"] == $oldPass && $newPass == $confPass) {
-    		    	$sq = "UPDATE `customer` SET `pswd`='$newPass' WHERE `cst_id` = '" .$_SESSION["cst_session"]. "'";
+    		    	$sq = "UPDATE `customer` SET `pswd`='$newPass' WHERE `cst_id` = '$id'";
     		    	$res = mysqli_query($con,$sq);
     		    	if ($res) {
     		    		$msg = "<p class='msg'>Password Successfully Updated.</p>";

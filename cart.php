@@ -48,6 +48,7 @@
 
 <?php 
 	$total = "0";
+	$msg = "";
 	ini_set('display_errors', 1); ini_set('display_startup_errors', 1);
 
 	if(isset($_GET["rem"])) {
@@ -81,7 +82,7 @@
 			</div>
 			<div class="menu-sec">
 		<ul class="ul-menu">
-			<li><a href="../index.php" class="navlink">Home</a></li>
+			<li><a href="index.php" class="navlink">Home</a></li>
 			<li id="cart"><a href="cart.php" class="navlink">Cart</a></li>
 			<li><a  class="navlink">About</a></li>
 			<li  id="login"><a href="login.php" class="navlink">Login</a></li>
@@ -98,6 +99,7 @@
         </div>
         <div class="cart_sec">
             <p class="cart_head">Cart Items</p>
+			<?php echo $msg;?>
 			<form method="POST" action="">
             <?php
                 ini_set('display_errors', 1); ini_set('display_startup_errors', 1);

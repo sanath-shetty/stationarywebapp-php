@@ -44,6 +44,31 @@
 		}
 	}
 ?>
+
+<?php
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1);
+if(isset($_GET["ac"])) {
+$add = $_GET["ac"];
+$sl = "SELECT * FROM `active` LIMIT 1";
+$cn = mysqli_query($con,$sl);
+
+if(mysqli_num_rows($cn) > 0) {
+    while($row = mysqli_fetch_assoc($cn)) {
+    $uid = $row["cst_id"];
+    $sql = "INSERT INTO `cart`(`cst_id`, `i_id`) VALUES ('$uid','$add')";
+    $res = mysqli_query($con,$sql);
+
+    if($res) {
+        header("location: index.php");
+    }else{
+        echo("Error occured.");
+    }
+}
+}else {
+    header("location: login.php");
+}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,7 +86,7 @@
 			</div>
 			<div class="menu-sec">
 		<ul class="ul-menu">
-			<li><a href="../index.php" class="navlink">Home</a></li>
+			<li><a href="index.php" class="navlink">Home</a></li>
 			<li id="cart"><a href="cart.php" class="navlink">Cart</a></li>
 			<li><a  class="navlink">About</a></li>
 			<li  id="login"><a href="login.php" class="navlink">Login</a></li>
@@ -95,7 +120,7 @@
                         <input type="number" name="inp_price" id="" class="inp_price" disabled="disabled" value="<?php echo $row['price'] ?>">
 						<input type="text" name="txt_disp" id="" disabled="disabled" value="<?php echo $row['disp'] ?>" class="txt_disp"></input>
                     </div>
-                    <a href="addto_cart.php?ac=<?php echo $row['i_id']; ?>" class="btn_update">Add to Cart</a>
+                    <a href="index.php?ac=<?php echo $row['i_id']; ?>" class="btn_update">Add to Cart</a>
                     <a href="buy_now.php?bn=<?php echo $row['i_id']; ?>" class="btn_delete">Buy Now</a>
 				</div>
 				<?php }
