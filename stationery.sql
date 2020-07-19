@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 20, 2020 at 11:21 AM
+-- Generation Time: May 31, 2020 at 02:20 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -34,14 +34,14 @@ CREATE TABLE IF NOT EXISTS `active` (
   `cst_id` int(11) NOT NULL,
   PRIMARY KEY (`act_id`),
   KEY `cst_id` (`cst_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `active`
 --
 
 INSERT INTO `active` (`act_id`, `cst_id`) VALUES
-(2, 2);
+(17, 2);
 
 -- --------------------------------------------------------
 
@@ -64,6 +64,22 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 INSERT INTO `admin` (`a_id`, `a_name`, `a_pswd`, `status`) VALUES
 (1, 'admin', 'sagar123', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE IF NOT EXISTS `cart` (
+  `crt_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cst_id` int(11) NOT NULL,
+  `i_id` int(11) NOT NULL,
+  PRIMARY KEY (`crt_id`),
+  KEY `cst_id` (`cst_id`),
+  KEY `i_id` (`i_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -106,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`cst_id`, `userName`, `email`, `pswd`) VALUES
-(2, 'sagar', 'sagar@gmail.com', 'user1');
+(2, 'sagar', 'sagar@gmail.com', 'sagar123');
 
 -- --------------------------------------------------------
 
@@ -144,6 +160,13 @@ INSERT INTO `items` (`i_id`, `image`, `type`, `title`, `price`, `disp`) VALUES
 --
 ALTER TABLE `active`
   ADD CONSTRAINT `cusId` FOREIGN KEY (`cst_id`) REFERENCES `customer` (`cst_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `costm_id` FOREIGN KEY (`cst_id`) REFERENCES `customer` (`cst_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `item_id` FOREIGN KEY (`i_id`) REFERENCES `items` (`i_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `items`

@@ -1,3 +1,18 @@
+<?php session_start();
+    include ('connect.php');
+   
+        $sql = "SELECT * FROM customer where `cst_id` = '" . $_SESSION["cst_session"] ."'";
+            $result = mysqli_query($con, $sql);
+            if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+            $user=$row["userName"];
+            }
+        }else{
+			echo("session failed");
+            header('location: cart.php');
+        }
+?>
+
 <?php
     include 'connect.php';
 	ini_set('display_errors', 1); ini_set('display_startup_errors', 1);
@@ -65,6 +80,7 @@
 	}
 	
 ?>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,7 +125,8 @@
                 if(mysqli_num_rows($res) > 0) {
                     while($row = mysqli_fetch_array($res)) { 
 						$total += $row["price"];
-
+						$cst = $row["cst_id"];
+							
 						?>
 					
                         <div class="item_sec">
@@ -131,7 +148,28 @@
 				}else {
 					$msg = "<p class=''>Your cart is empty.</p>";
 				}
-				
+				if(isset($_POST["proceed"])) {
+					$date = date("Y-m-d");
+					
+					$sq = "INSERT INTO `order_history`(`p_date`, `cst_id`, `total`) VALUES ('$date','$cst','$total')";
+					$result = mysqli_query($con,$sq);
+
+					if($result) {
+						include ('connect.php');
+						$sql = "DELETE FROM `cart` WHERE `cst_id` = '" .$_SESSION['cst_session']. "'";
+						echo($sql);
+						$res = mysqli_query($con,$sql);
+
+						if($res) {
+							header('location: orderplaced.php');
+
+						}else {
+							echo("error in clearing cart.");
+						}
+					}else{
+						echo("failed to insert");
+					}
+				}	
             ?>
 			<label class="total_head">Total : ₹ </label>
 			<input type="text" name="tot_pr" class="tot_pr" disabled="disabled" value="<?php echo $total;?>"><br>

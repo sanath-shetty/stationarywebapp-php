@@ -1,0 +1,15 @@
+h1 {
+  text-align: -webkit-center;
+  font-size: 50px;
+  font-family: sans-serif;
+  color: #7a662b;
+  margin-top: 12%;
+}
+a.btn-home {
+  font-size: 20px;
+  background: red;
+  color: wheat;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  margin: 2% 43%;
+}

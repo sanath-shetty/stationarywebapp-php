@@ -1,6 +1,20 @@
 <?php
-	include 'connect.php';
-	
+   include 'connect.php';
+   session_start();
+
+   if(!isset($_SESSION["cst_session"])) {
+	    $sql = "DELETE FROM `active`";
+		$res = mysqli_query($con,$sql);
+		
+		if($res) {
+			
+		}else {
+			echo("Failed");
+		}
+   }
+
+?>
+<?php
 	ini_set('display_errors', 1); ini_set('display_startup_errors', 1);
 
 	$sql = "SELECT * FROM `active` INNER JOIN `customer` ON active.cst_id = customer.cst_id";
@@ -69,6 +83,7 @@ if(mysqli_num_rows($cn) > 0) {
 }
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -111,6 +126,7 @@ if(mysqli_num_rows($cn) > 0) {
 
         if(mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_array($result)) {
+
 			?>
 			    <div class="box">
 				    <img src="image/upload/<?php echo $row['image'];?>" alt="" class="img_prop">
@@ -121,10 +137,29 @@ if(mysqli_num_rows($cn) > 0) {
 						<input type="text" name="txt_disp" id="" disabled="disabled" value="<?php echo $row['disp'] ?>" class="txt_disp"></input>
                     </div>
                     <a href="index.php?ac=<?php echo $row['i_id']; ?>" class="btn_update">Add to Cart</a>
-                    <a href="buy_now.php?bn=<?php echo $row['i_id']; ?>" class="btn_delete">Buy Now</a>
+					<?php 
+						ini_set('display_errors', 1); ini_set('display_startup_errors', 1);
+						include 'connect.php';
+	                    if(isset($_GET["bn"])) {
+							$buy = $_GET["bn"];
+							$date = date("Y-m-d");
+							$total = $row["price"];
+							
+							$sq = "INSERT INTO `order_history`(`p_date`, `cst_id`, `total`) VALUES ('$date','$_SESSION[cst_session]','$total')";
+							echo($sq);
+							$result = mysqli_query($con,$sq);
+							
+							if($result) {
+								header('location: orderplaced.php');
+							}else{
+								echo("failed to insert");
+							}
+	                    }
+                    ?>
+                    <a href="index.php?bn=<?php echo $row['i_id']; ?>" class="btn_delete">Buy Now</a>
 				</div>
 				<?php }
-        }
+		}
     ?>
 			</div>
 			</form>
